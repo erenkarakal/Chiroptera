@@ -2,6 +2,7 @@ package me.eren.chiroptera.core.packets;
 
 import me.eren.chiroptera.core.Packet;
 
+import java.io.Serializable;
 import java.util.Map;
 
 /**
@@ -12,7 +13,7 @@ public class KeepAlivePacket extends Packet {
     private final byte random;
 
     public KeepAlivePacket(byte random) {
-        super((byte) -3, Map.of(0, random));
+        super((byte) -3, new Serializable[]{ random });
         this.random = random;
     }
 

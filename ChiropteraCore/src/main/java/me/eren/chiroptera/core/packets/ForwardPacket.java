@@ -2,6 +2,7 @@ package me.eren.chiroptera.core.packets;
 
 import me.eren.chiroptera.core.Packet;
 
+import java.io.Serializable;
 import java.util.Map;
 
 /**
@@ -13,7 +14,7 @@ public class ForwardPacket extends Packet {
     private final Packet packetToSend;
 
     public ForwardPacket(String clientToSend, Packet packetToSend) {
-        super((byte) -6, Map.of(0, clientToSend, 1, packetToSend));
+        super((byte) -6, new Serializable[]{ clientToSend, packetToSend });
         this.clientToSend = clientToSend;
         this.packetToSend = packetToSend;
     }

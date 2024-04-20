@@ -2,6 +2,7 @@ package me.eren.chiroptera.core.packets;
 
 import me.eren.chiroptera.core.Packet;
 
+import java.io.Serializable;
 import java.util.Map;
 
 /**
@@ -13,7 +14,7 @@ public class AuthenticatePacket extends Packet {
     private final String secret;
 
     public AuthenticatePacket(String identifier, String secret) {
-        super(1)
+        super((byte) 1, new Serializable[]{ identifier, secret });
         this.identifier = identifier;
         this.secret = secret;
     }
