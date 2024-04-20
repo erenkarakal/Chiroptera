@@ -1,0 +1,7 @@
+name: Chiroptera
+main: me.eren.chiroptera.bukkit.ChiropteraPlugin
+version: 1.0.0
+author: eren.
+softdepend:
+  - Skript
+api-version: '1.13'

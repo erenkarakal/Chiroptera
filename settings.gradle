@@ -1,0 +1,5 @@
+rootProject.name = 'chiroptera'
+include 'ChiropteraCore'
+include 'ChiropteraBukkit'
+include 'ChiropteraCore'
+

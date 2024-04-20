@@ -1,0 +1,22 @@
+subprojects {
+    apply plugin: 'java'
+
+    group = 'me.eren.chiroptera'
+    version = '0.0.1-SNAPSHOT'
+
+    tasks.withType(JavaCompile).configureEach {
+        options.release = 17
+    }
+
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(17))
+        }
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies { }
+}
